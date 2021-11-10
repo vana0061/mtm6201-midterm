@@ -100,6 +100,11 @@ p {
     margin: auto;
 }
 
+.page-title {
+    display: flex;
+    color: blue;
+}
+
 /* NAV */
 
 .flex-container {
@@ -163,23 +168,6 @@ p {
     border:#c78b07 solid 1px;
 }
 
-.hamburger {
-    position: absolute;
-    top: .75 rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 31px;
-    height: 21px;
-}
-
-.hamburger .bar {
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
-}
-
 @keyframes bounceIn {
     0% {
       transform: scale(0.1);
@@ -202,14 +190,6 @@ p {
 
 .banner img {
     width: 100%;
-}
-
- @keyframes bounce-4 {
-    0%   { transform: scale(1,1)    translateY(0); }
-    10%  { transform: scale(1,.9) translateY(0); }
-    30%  { transform: scale(.9,1) translateY(-100px); }
-    50%  { transform: scale(1,1)    translateY(0); }
-    100% { transform: scale(1,1)    translateY(0); }
 }
 
 .banner .green-box {
@@ -422,8 +402,6 @@ footer .icons {
 
 
 /*******************CONTACT PAGE************************/
-
-
   
   * {
     box-sizing: border-box;
@@ -473,14 +451,11 @@ input[type=text], select, textarea {
     width: 50%;
   } 
 
-
-
   /*************************MEDIA QUERRIES******************/
 
   @media only screen and (max-width: 1070px) {
 
 .section-cards {
-    background: lightblue;
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -532,10 +507,9 @@ input[type=text], select, textarea {
 .links li:hover {
     animation: none;
     opacity: 75%;
-  }
-    
+}
 
-  }  
+}  
 
   @media only screen and (max-width: 860px) {
 
@@ -638,7 +612,6 @@ input[type=text], select, textarea {
     font-size: 3vw;
 }
 
-
   }
 
   @media only screen and (max-width: 770px) {
@@ -649,9 +622,7 @@ input[type=text], select, textarea {
     display: flex;
     flex-direction: column;
     padding: auto;
-    margin: auto;
-    border: lightgreen solid 3px;
-    
+    margin: auto;  
   }
 
   .flex-container .logo{
