@@ -1,0 +1,741 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****************STYLES START HERE***************/
+
+body {
+    font-family: Signika Negative, 'Open Sans', Arial, sans-serif; 
+    background: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+header {
+    background: white;
+	justify-content: center;
+}
+
+main {
+    display: flex;
+	flex-direction: column;
+    align-content: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3vw;
+    line-height:1.5;
+    color: black;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2vw;
+    line-height:1;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height:1;
+}
+
+h1, h2, h3, h4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    padding-bottom: 5px;
+    margin: auto;
+}
+
+/* NAV */
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+    margin: auto;
+  }
+
+  .navbar {
+      flex: 1;
+      max-width: 800px;
+  }
+
+  .navbar .links { 
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+  }
+
+  .links li {
+    text-align: center;
+    padding: 10px;
+    list-style: none;
+    display:inline-block;
+    flex-wrap: nowrap;
+  }
+
+  .links li:hover {
+    animation: bounceIn 2s;  /*********************ANIMATION********************/
+  }
+
+  .links li a{
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+
+  .logo img { /**************change opacity on hover to show its an active link************/
+    flex: 1;
+    width: 150px;
+    margin-right: 20%;
+    justify-content: center;
+  }
+
+  .logo img:hover {
+      opacity: 75%;
+  }
+
+  nav form {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+  nav form button {
+    border:#c78b07 solid 1px;
+}
+
+.hamburger {
+    position: absolute;
+    top: .75 rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/***********************BANNER*********************/
+
+.banner {
+    position: relative; 
+}
+
+.banner img {
+    width: 100%;
+}
+
+ @keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1,.9) translateY(0); }
+    30%  { transform: scale(.9,1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+.banner .green-box {
+    background: green;
+    position:absolute;
+    opacity: 0.5;
+    right: 50%;
+    top: 10%;
+    bottom:10%;
+    left: 5%; 
+}
+
+.banner .header-text {
+	text-align: left;
+    position:absolute;
+    right: 50%;
+    top: 10%;
+    bottom:10%;
+    left: 5%;
+	transform: translate -50%, 50%; 
+}
+
+.banner .header-text h1{
+    color: white;
+    font-size: 4vw;
+}
+
+.banner .header-text p{
+    color: white;
+    font-size: 3vw;
+}
+
+/******************SECTION-MENU******************/
+
+.section-cards {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+.card {
+    display:flex;
+    flex-wrap: wrap;
+    padding: 30px;           
+    min-width: 500px;
+    min-height: 250px;
+    background-color: lightgreen;
+    margin: 0;
+}
+
+.card img {
+    flex: 1;
+    max-width: 200px;
+    height: 200px;
+	border-radius: 100%;
+    border: solid black 1px;
+    position:relative;
+    margin-left: 20px;
+}
+
+.text {
+    box-sizing: border-box;
+	flex: 1;
+    flex-direction: column;
+	align-self: center;
+    text-align: center;
+    margin: auto;
+    max-width: 200px;
+}
+
+.text h1 {
+    font-size: 30px;
+}
+
+.text button {
+    margin: 10px 0 0 0;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.green {
+    color:darkgreen;
+    word-wrap: normal;
+}
+	
+/**********************SECTION-SOCIAL*******************/
+
+.section-social {
+    border: solid lightgreen 1px;
+}
+
+.section-social h1 {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    background: lightgreen;
+    border-bottom: solid black 1px;
+}
+
+.section-social .container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-top: 30px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+.post img {
+	width: 100%;
+}
+
+.post p {
+    font-size: 1.5vw;
+}
+
+
+/******************SECTION-INFO*********************/
+
+.section-info .green-box {
+    background: green;
+}
+
+.section-info {
+	display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hours {
+    flex: 1;
+    min-width: 275px;
+    height: 360px;
+    padding: 20px;
+    background:lightgreen;
+}
+
+.hours h3{
+    text-align: left;
+    padding-bottom: 10px;
+    font-size: 5vh;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    color: darkgreen;
+}
+
+.map {
+    flex:2;
+    width: 100%;
+}
+
+
+/*******************FOOTER**********************/
+
+footer {
+    width: 100%;
+    background: lightgray;
+    text-align: left;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+}
+
+footer .contact p, a{
+    font-size: 12px;
+    color: black;
+}
+
+footer .contact a:hover {   /**************change color on hover to show its an active link************/
+    color: blue;
+}
+
+footer .icons {
+    float: right;
+    padding: 10px;
+}
+
+.fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+    background: black;
+    color: white;
+}
+
+.copyright p {
+    font-size: 12px;
+}
+
+
+/*******************CONTACT PAGE************************/
+
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .section-contact-form {
+    background-image: url("../Images/Header.jpg");
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {  /**************Change color on hover *************/
+    background-color: lightgreen;
+  }
+  
+  /********************Form background color**********************/
+  .form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+  } 
+
+
+
+  /*************************MEDIA QUERRIES******************/
+
+  @media only screen and (max-width: 1070px) {
+
+.section-cards {
+    background: lightblue;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+.card {
+    display:flex;
+    flex-direction: column-reverse;
+    align-self: center;
+    padding: 30px;           
+    min-width: 400px;
+    min-height: 250px;
+    background-color: lightgreen;
+    margin: 0;
+}
+
+.card img {
+    max-width: 200px;
+    height: 200px;
+	border-radius: 100%;
+    border: solid black 1px;
+    position:relative;
+    align-self:flex-start;
+    margin: auto;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.text h1 {
+    font-size: 30px;
+}
+
+.text button {
+    margin: 20px 0 0 0;
+    padding: 5px 10px 5px 10px;
+}
+
+.green {
+    color:darkgreen;
+    word-wrap: normal;
+}
+
+.links li:hover {
+    animation: none;
+    opacity: 75%;
+  }
+    
+
+  }  
+
+  @media only screen and (max-width: 860px) {
+
+.section-cards {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+}
+
+
+.card {
+    display:flex;
+    flex-direction: column-reverse;
+    padding: 50px;           
+    min-width: 100%;
+    height: 250px;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+    align-content:space-around;
+    justify-content: space-evenly;
+}
+
+.card img {
+    flex: 1;
+    max-width: 200px;
+    height: 200px;
+	border-radius: 100%;
+    border: solid black 1px;
+    position:relative;
+    margin-left: 20px;
+}
+
+.text {
+    box-sizing: border-box;
+	flex: 2;
+    flex-direction: column;
+	align-self: center;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+  
+}
+
+.text h1 {
+    font-size: 30px;
+}
+
+.text button {
+    margin: 10px 0 0 0;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.green {
+    color:darkgreen;
+    word-wrap: normal;
+}
+
+/*********BANNER***********/
+.banner {
+    position: relative; 
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner .green-box {
+    background: green;
+    position:absolute;
+    align-self: center;
+    opacity: 0.5;
+    right: 10%;
+    top: 10%;
+    bottom:10%;
+    left: 10%;
+    padding: auto;
+}
+
+.banner .header-text {
+	text-align: left;
+    position:absolute;
+    right: 20%;
+    top: 10%;
+    bottom:10%;
+    left: 20%;
+	transform: translate -50%, 50%; 
+}
+
+.banner .header-text h1{
+    color: white;
+    font-size: 4vw;
+}
+
+.banner .header-text p{
+    color: white;
+    font-size: 3vw;
+}
+
+
+  }
+
+  @media only screen and (max-width: 770px) {
+
+    /**************************NAV************************/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    border: lightgreen solid 3px;
+    
+  }
+
+  .flex-container .logo{
+      display: flex;
+      align-self: center;
+  }
+ 
+  .navbar .links {
+      display: flex;
+      text-align: center;
+  }
+
+  .links li {
+    text-align: center;
+    padding: 10px;
+    list-style: none;
+    border: white solid 1px;
+    background:lightgreen;
+  }
+
+  .links li a{
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+
+  .logo img {
+    width: 250px;
+  }
+
+  nav form {
+    padding: 10px;
+}
+
+
+  }
+
+  @media only screen and (max-width: 660px) {
+
+/******************************NAV**************************/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+  }
+
+.flex-container .logo{
+    display: flex;
+    align-self:flex-start;
+}
+
+.logo img {
+    width: 150px;      
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.navbar .links {
+    display: none;
+    flex-direction: column;
+}
+
+.navbar .links {
+    display: flex;
+}
+
+  }
