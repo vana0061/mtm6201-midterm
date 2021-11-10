@@ -101,8 +101,9 @@ p {
 }
 
 .page-title {
-    display: flex;
-    color: blue;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
 }
 
 /* NAV */
